@@ -34,8 +34,11 @@ class Menu extends JFrame {
 
     public Menu() throws IOException {
         super("Сапер");
+        setSize(800,500);
         setDefaultCloseOperation(EXIT_ON_CLOSE);
-        setIconImage(new ImageIcon("C:\\Users\\Ярослав\\IdeaProjects\\Saper\\src\\ru\\academITschool\\ZubanYaroslav\\minesweepe\\resources\\icona.jpg").getImage());
+        setIconImage(new ImageIcon("C:\\Users\\Ярослав" +
+                "\\IdeaProjects\\Saper\\src\\ru\\academITschool\\ZubanYaroslav" +
+                "\\minesweepe\\resources\\icona.jpg").getImage());
 
         ok=new JButton("Создать игрока");
         ok.setBackground(Color.green);
@@ -53,14 +56,14 @@ class Menu extends JFrame {
 
 
     public static void main(String[] args) {
-        Menu menu= null;
+       Menu menu= null;
 
-        try {
+       try {
             menu = new Menu();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+      } catch (IOException e) {
+            //e.printStackTrace();
+       }
 
-        menu.setVisible(true);
+       menu.setVisible(true);
     }
 }
